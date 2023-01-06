@@ -1,0 +1,132 @@
+:root {
+    --green: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --darkBlue: hsl(212, 21%, 14%);
+    --darkGravishBlue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+
+    --fontPrimary: 'Montserrat', sans-serif;
+    --fontSecundary: 'Fraunces', serif;
+}
+
+* {
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 50%;
+    background-color: var(--white);
+    border-radius: 2rem;
+    overflow: hidden;
+    max-width: 80rem;
+    background-image: linear-gradient(to right, transparent 0%, transparent 50%, var(--white) 50%, var(--white) 100% ), url(../images/image-product-desktop.jpg);
+    background-repeat: no-repeat;
+    background-position: center, left center;
+    background-size: contain;
+}   
+
+.main__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.main__content {
+    padding: 5rem 0 0 0;
+    width: 90%;
+    margin: 0 auto;
+    grid-column: 2 / 3;
+}
+
+.main__perfume {
+    margin-bottom: 2rem;
+    font-family: var(--fontPrimary);
+    color: var(--darkGravishBlue);
+}
+
+.main__heading {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    font-family: var(--fontSecundary);
+}
+
+.main__text {
+    line-height: 2;
+    font-family: var(--fontPrimary);
+    color: var(--darkGravishBlue);
+    text-align: left;
+    max-width: 80%;
+    font-size: 1.7rem;
+    
+}
+
+.main__prices {
+    display: flex;
+    gap: 2rem;
+    width: 80%;
+    align-items: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+
+}
+.main__price {
+    color: var(--green);
+    font-size: 4rem;
+    font-family: var(--fontSecundary);
+    font-weight: 700;
+}
+.main__price--before {
+    text-decoration: line-through;
+    color: var(--darkGravishBlue);
+    font-size: 1.4rem;
+    font-family: var(--fontPrimary);
+}
+.main__button {
+    display: inline-block;
+    width: 30rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--green);
+    border-radius: 1rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--fontPrimary);
+    font-size: 2rem;
+    font-weight: 700;
+    transition-property: background-color;
+    transition-duration: .1s;
+
+}
+.main__button:hover {
+    background-color: hsl(158, 35%, 27%);
+}
+
